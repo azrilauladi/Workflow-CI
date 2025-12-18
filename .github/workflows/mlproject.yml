@@ -16,7 +16,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install mlflow
-          pip install -r Workflow-CI/MLProject/conda.yaml
+          pip install pandas scikit-learn matplotlib seaborn numpy
       - name: Run MLflow Project
         run: |
           cd Workflow-CI/MLProject
