@@ -23,7 +23,7 @@ def main(train_data_path, test_data_path):
     y_test = test_data['quality']
     
     # Set experiment name
-    mlflow.set_experiment("Wine_Quality_Classification")
+    # mlflow.set_experiment("Wine_Quality_Classification")
     
     # Enable autolog
     mlflow.sklearn.autolog()
