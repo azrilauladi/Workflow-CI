@@ -11,10 +11,10 @@ import mlflow.sklearn
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 
-def main():
+def main(train_data_path, test_data_path):
     # Load preprocessed data
-    train_data = pd.read_csv('WineQT_train.csv')
-    test_data = pd.read_csv('WineQT_test.csv')
+    train_data = pd.read_csv(train_data_path)
+    test_data = pd.read_csv(test_data_path)
     
     # Split features dan target
     X_train = train_data.drop('quality', axis=1)
