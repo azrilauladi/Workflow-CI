@@ -1,0 +1,37 @@
+artifact_path: file:///D:/KULIAH/ASAH/Membangun Sistem Machine Learning/SMSML_Achmad
+  Azril/Workflow-CI/MLProject/mlruns/1/models/m-360a19741702475a9ab71c98cd6bd095/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.4
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+is_signature_from_type_hint: false
+mlflow_version: 3.7.0
+model_id: m-360a19741702475a9ab71c98cd6bd095
+model_size_bytes: 13307537
+model_uuid: m-360a19741702475a9ab71c98cd6bd095
+prompts: null
+run_id: f3ba9b8f3cd34c2199a96bc8c7181b29
+signature:
+  inputs: '[{"type": "double", "name": "student_id", "required": true}, {"type": "double",
+    "name": "age", "required": true}, {"type": "double", "name": "gender", "required":
+    true}, {"type": "double", "name": "course", "required": true}, {"type": "double",
+    "name": "study_hours", "required": true}, {"type": "double", "name": "class_attendance",
+    "required": true}, {"type": "double", "name": "internet_access", "required": true},
+    {"type": "double", "name": "sleep_hours", "required": true}, {"type": "double",
+    "name": "sleep_quality", "required": true}, {"type": "double", "name": "study_method",
+    "required": true}, {"type": "double", "name": "facility_rating", "required": true},
+    {"type": "double", "name": "exam_difficulty", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-12-19 03:24:01.249351'

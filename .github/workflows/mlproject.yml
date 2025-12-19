@@ -1,22 +1,35 @@
 name: MLflow Project CI
+
 on:
   push:
     branches: [main]
   workflow_dispatch:
+
 jobs:
   train-model:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
+
       - name: Install dependencies
         run: |
-          pip install mlflow
-          pip install pandas scikit-learn matplotlib seaborn numpy
+          pip install --upgrade pip
+          pip install mlflow pandas scikit-learn matplotlib seaborn numpy
+
+      - name: List MLProject files
+        run: |
+          echo "=== MLProject Directory ==="
+          ls -la MLProject/
+          echo ""
+          echo "=== Preview ExamScore_train.csv ==="
+          head -5 MLProject/ExamScore_train.csv
+
       - name: Run MLflow Project
         run: |
           cd MLProject

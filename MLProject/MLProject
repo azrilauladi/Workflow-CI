@@ -1,10 +1,10 @@
-name: wine-quality-classification
+name: exam-score-regression
 
 conda_env: conda.yaml
 
 entry_points:
   main:
     parameters:
-      train_data: {type: str, default: WineQT_train.csv}
-      test_data: {type: str, default: WineQT_test.csv}
+      train_data: {type: str, default: ExamScore_train.csv}
+      test_data: {type: str, default: ExamScore_test.csv}
     command: "python modelling.py --train_data {train_data} --test_data {test_data}"
