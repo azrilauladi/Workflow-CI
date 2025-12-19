@@ -24,7 +24,7 @@ def main():
     y_test = test_data['Performance Index']
     
     # Set experiment name
-    mlflow.set_experiment("Exam_Score_Regression")
+    # mlflow.set_experiment("Exam_Score_Regression")
     
     # Enable autolog
     mlflow.sklearn.autolog()
